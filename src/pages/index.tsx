@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 
-export default function Home() {
+const Index = () => {
   return (
     <div>
       <main></main>
@@ -9,3 +9,5 @@ export default function Home() {
     </div>
   )
 }
+
+export default Index
