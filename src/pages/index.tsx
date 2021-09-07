@@ -1,12 +1,20 @@
-import Head from 'next/head'
-import Image from 'next/image'
+import styled from 'styled-components'
+
+import { SearchBar } from '../components/search-bar'
+import { MapCanvas } from '../components/map-canvas'
+import { SlidingUpPanel } from '../components/sliding-up-panel'
+
+const Container = styled.div``
 
 const Index = () => {
   return (
-    <div>
-      <main></main>
-      <footer></footer>
-    </div>
+    <Container>
+      <SearchBar></SearchBar>
+      <main>
+        <MapCanvas></MapCanvas>
+        <SlidingUpPanel></SlidingUpPanel>
+      </main>
+    </Container>
   )
 }
 
