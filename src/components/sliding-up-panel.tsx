@@ -1,15 +1,17 @@
-interface Props {
-  isShow: boolean
-}
+import React from 'react'
 
-export const SlidingUpPanel = ({ isShow }: Props) => {
-  return (
-    <>
-      <div></div>
-    </>
-  )
-}
+export class SlidingUpPanel extends React.Component {
+  static propTypes = {}
 
-SlidingUpPanel.defaultProps = {
-  isShow: false,
+  constructor(props: any) {
+    super(props)
+  }
+
+  render() {
+    return (
+      <>
+        <div></div>
+      </>
+    )
+  }
 }

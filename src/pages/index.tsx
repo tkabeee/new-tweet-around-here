@@ -26,7 +26,7 @@ const Index = () => {
       />
       <main>
         <MapCanvas />
-        <SlidingUpPanel isShow={showPanel} />
+        <SlidingUpPanel />
       </main>
     </Container>
   )
