@@ -25,3 +25,8 @@ export const SearchBar = ({
     </>
   )
 }
+
+SearchBar.defaultProps = {
+  value: '',
+  placeholder: 'Type Here...',
+}
