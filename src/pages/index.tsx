@@ -20,6 +20,9 @@ const Index = () => {
         onChangeText={(e) => {
           setSearchQuery(e.target.value)
         }}
+        onClickSearch={(e) => {
+          console.log('search')
+        }}
       />
       <main>
         <MapCanvas />

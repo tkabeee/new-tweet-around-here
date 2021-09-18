@@ -2,9 +2,15 @@ interface Props {
   value: string
   placeholder: string
   onChangeText: (event: React.ChangeEvent<HTMLInputElement>) => void
+  onClickSearch: (event: React.MouseEvent<HTMLButtonElement>) => void
 }
 
-export const SearchBar = ({ value, placeholder, onChangeText }: Props) => {
+export const SearchBar = ({
+  value,
+  placeholder,
+  onChangeText,
+  onClickSearch,
+}: Props) => {
   return (
     <>
       <div>
@@ -14,7 +20,7 @@ export const SearchBar = ({ value, placeholder, onChangeText }: Props) => {
           placeholder={placeholder}
           onChange={(e) => onChangeText(e)}
         />
-        <button>search</button>
+        <button onClick={(e) => onClickSearch(e)}>search</button>
       </div>
     </>
   )
