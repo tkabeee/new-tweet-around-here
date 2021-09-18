@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import styled from 'styled-components'
 
 import { SearchBar } from '../components/search-bar'
@@ -7,12 +8,22 @@ import { SlidingUpPanel } from '../components/sliding-up-panel'
 const Container = styled.div``
 
 const Index = () => {
+  const [searchQuery, setSearchQuery] = useState<string>('')
+
+  useEffect(() => {}, [searchQuery])
+
   return (
     <Container>
-      <SearchBar></SearchBar>
+      <SearchBar
+        value={searchQuery}
+        placeholder="Type Here..."
+        onChangeText={(e) => {
+          setSearchQuery(e.target.value)
+        }}
+      />
       <main>
-        <MapCanvas></MapCanvas>
-        <SlidingUpPanel></SlidingUpPanel>
+        <MapCanvas />
+        <SlidingUpPanel />
       </main>
     </Container>
   )
