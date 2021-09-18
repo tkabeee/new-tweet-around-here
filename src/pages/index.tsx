@@ -9,6 +9,7 @@ const Container = styled.div``
 
 const Index = () => {
   const [searchQuery, setSearchQuery] = useState<string>('')
+  const [showPanel, setShowPanel] = useState<boolean>(false)
 
   useEffect(() => {}, [searchQuery])
 
@@ -16,7 +17,6 @@ const Index = () => {
     <Container>
       <SearchBar
         value={searchQuery}
-        placeholder="Type Here..."
         onChangeText={(e) => {
           setSearchQuery(e.target.value)
         }}
@@ -26,7 +26,7 @@ const Index = () => {
       />
       <main>
         <MapCanvas />
-        <SlidingUpPanel />
+        <SlidingUpPanel isShow={showPanel} />
       </main>
     </Container>
   )
