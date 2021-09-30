@@ -13,6 +13,10 @@ const Index = () => {
 
   useEffect(() => {}, [searchQuery])
 
+  // tweet検索を実行
+  // パネルをアクティブ化
+  // パネルをスライドアップ
+
   return (
     <Container>
       <SearchBar
