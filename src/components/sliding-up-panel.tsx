@@ -1,7 +1,9 @@
+import { useRef } from 'react'
+
 interface Props {
   height: number
-  onDragStart(): void
-  onDragEnd(): void
+  onDragStart?(): void
+  onDragEnd?(): void
 }
 
 export const SlidingUpPanel = (props: Props) => {
@@ -9,6 +11,7 @@ export const SlidingUpPanel = (props: Props) => {
 
   const show = () => {}
   const hide = () => {}
+  const scrollIntoView = () => {}
 
   return (
     <>
