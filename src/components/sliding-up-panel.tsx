@@ -3,9 +3,11 @@
 
 import { useRef } from 'react'
 
+import * as Constants from '../lib/constants'
+
 interface Props {
   height: number
-  draggableRage: {
+  draggableRange: {
     top: number
     bottom: number
   }
@@ -26,9 +28,24 @@ interface Props {
   children: any
 }
 
-export const SlidingUpPanel = (props: Props) => {
-  const { height } = props
+const usableHeight: number = 0
 
+export const SlidingUpPanel = ({
+  height = usableHeight,
+  draggableRange = { top: usableHeight, bottom: 0 },
+  snappingPoints = [],
+  minimumVelocityThreshold = Constants.DEFAULT_MINIMUM_VELOCITY_THRESHOLD,
+  minimumDistanceThreshold = Constants.DEFAULT_MINIMUM_DISTANCE_THRESHOLD,
+  onBackButtonPress = () => {},
+  onDragStart = () => {},
+  onDragEnd = () => {},
+  onBottomReached = () => {},
+  allowMomentum = true,
+  allowDragging = true,
+  showBackdrop = true,
+  backdropOpacity = 0.75,
+  friction = Constants.DEFAULT_FRICTION,
+}: Props) => {
   const show = () => {}
   const hide = () => {}
   const scrollIntoView = () => {}
