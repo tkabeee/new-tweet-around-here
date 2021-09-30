@@ -7,9 +7,9 @@ const Map = styled.div`
 `
 
 export const MapCanvas = () => {
-  const mapRef = useRef<HTMLInputElement>(
+  const mapRef = useRef<HTMLDivElement>(
     null
-  ) as React.MutableRefObject<HTMLInputElement>
+  ) as React.MutableRefObject<HTMLDivElement>
 
   useEffect(() => {
     if (mapRef && mapRef.current) {
