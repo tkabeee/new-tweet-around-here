@@ -1,3 +1,6 @@
+// Reference
+// https://github.com/octopitus/rn-sliding-up-panel/blob/master/SlidingUpPanel.js
+
 import { useRef } from 'react'
 
 interface Props {
