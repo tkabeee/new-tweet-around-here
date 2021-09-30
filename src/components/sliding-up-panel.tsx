@@ -1,17 +1,15 @@
-import React from 'react'
+interface Props {
+  height: number
+}
 
-export class SlidingUpPanel extends React.Component {
-  static propTypes = {}
+export const SlidingUpPanel = ({ height }: Props) => {
+  // functions
+  // drag start
+  // drag end
 
-  constructor(props: any) {
-    super(props)
-  }
-
-  render() {
-    return (
-      <>
-        <div></div>
-      </>
-    )
-  }
+  return (
+    <>
+      <div></div>
+    </>
+  )
 }
