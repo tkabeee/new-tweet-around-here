@@ -30,7 +30,17 @@ const Index = () => {
       />
       <main>
         <MapCanvas />
-        <SlidingUpPanel height={100} />
+        <SlidingUpPanel
+          height={100}
+          draggableRange={{
+            top: 0,
+            bottom: 0,
+          }}
+          containerStyle={{}}
+          backdropStyle={{}}
+        >
+          <div>children</div>
+        </SlidingUpPanel>
       </main>
     </Container>
   )

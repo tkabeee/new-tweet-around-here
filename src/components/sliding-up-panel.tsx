@@ -11,20 +11,20 @@ interface Props {
     top: number
     bottom: number
   }
-  snappingPoints: number[]
-  minimumVelocityThreshold: number
-  minimumDistanceThreshold: number
+  snappingPoints?: number[]
+  minimumVelocityThreshold?: number
+  minimumDistanceThreshold?: number
   onBackButtonPress?(): void
   onDragStart?(): void
   onDragEnd?(): void
   onBottomReached?(): void
-  allowMomentum: boolean
-  allowDragging: boolean
-  showBackdrop: boolean
-  backdropOpacity: number
-  friction: number
-  containerStyle: {}
-  backdropStyle: {}
+  allowMomentum?: boolean
+  allowDragging?: boolean
+  showBackdrop?: boolean
+  backdropOpacity?: number
+  friction?: number
+  containerStyle?: {}
+  backdropStyle?: {}
   children: any
 }
 
@@ -45,6 +45,8 @@ export const SlidingUpPanel = ({
   showBackdrop = true,
   backdropOpacity = 0.75,
   friction = Constants.DEFAULT_FRICTION,
+  containerStyle = {},
+  backdropStyle = {},
   children,
 }: Props) => {
   const show = () => {}
@@ -71,9 +73,10 @@ export const SlidingUpPanel = ({
     return <></>
   }
 
-  const renderContent = () => {
-    return <>{children}</>
-  }
-
-  return [renderBackdrop, renderContent]
+  return (
+    <>
+      {renderBackdrop}
+      <div>{children}</div>
+    </>
+  )
 }
