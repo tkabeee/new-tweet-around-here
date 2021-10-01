@@ -31,7 +31,7 @@ const Index = () => {
       <main>
         <MapCanvas />
         <SlidingUpPanel
-          height={100}
+          height={300}
           draggableRange={{
             top: 0,
             bottom: 0,
@@ -39,7 +39,65 @@ const Index = () => {
           containerStyle={{}}
           backdropStyle={{}}
         >
-          <div>children</div>
+          <div>
+            <div>
+              <dl>
+                <dt>dummy title</dt>
+                <dd>dummy text</dd>
+                <dd>dummy text</dd>
+              </dl>
+              <dl>
+                <dt>dummy title</dt>
+                <dd>dummy text</dd>
+                <dd>dummy text</dd>
+              </dl>
+              <dl>
+                <dt>dummy title</dt>
+                <dd>dummy text</dd>
+                <dd>dummy text</dd>
+              </dl>
+              <dl>
+                <dt>dummy title</dt>
+                <dd>dummy text</dd>
+                <dd>dummy text</dd>
+              </dl>
+              <dl>
+                <dt>dummy title</dt>
+                <dd>dummy text</dd>
+                <dd>dummy text</dd>
+              </dl>
+              <dl>
+                <dt>dummy title</dt>
+                <dd>dummy text</dd>
+                <dd>dummy text</dd>
+              </dl>
+              <dl>
+                <dt>dummy title</dt>
+                <dd>dummy text</dd>
+                <dd>dummy text</dd>
+              </dl>
+              <dl>
+                <dt>dummy title</dt>
+                <dd>dummy text</dd>
+                <dd>dummy text</dd>
+              </dl>
+              <dl>
+                <dt>dummy title</dt>
+                <dd>dummy text</dd>
+                <dd>dummy text</dd>
+              </dl>
+              <dl>
+                <dt>dummy title</dt>
+                <dd>dummy text</dd>
+                <dd>dummy text</dd>
+              </dl>
+              <dl>
+                <dt>dummy title</dt>
+                <dd>dummy text</dd>
+                <dd>dummy text</dd>
+              </dl>
+            </div>
+          </div>
         </SlidingUpPanel>
       </main>
     </Container>
