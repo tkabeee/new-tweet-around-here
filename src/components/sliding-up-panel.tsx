@@ -66,12 +66,13 @@ export const SlidingUpPanel = ({
     // start flick
   }
 
-  // render backdrop
-  // render content
+  const renderBackdrop = () => {
+    return <></>
+  }
 
-  return (
-    <>
-      <div></div>
-    </>
-  )
+  const renderContent = () => {
+    return <></>
+  }
+
+  return [renderBackdrop, renderContent]
 }
