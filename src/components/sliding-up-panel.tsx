@@ -1,7 +1,7 @@
 // Reference
 // https://github.com/octopitus/rn-sliding-up-panel/blob/master/SlidingUpPanel.js
 
-import { useRef } from 'react'
+import { useEffect, useRef } from 'react'
 
 import * as Constants from '../lib/constants'
 
@@ -47,8 +47,27 @@ export const SlidingUpPanel = ({
   friction = Constants.DEFAULT_FRICTION,
 }: Props) => {
   const show = () => {}
-  const hide = () => {}
+
+  const hide = () => {
+    const { bottom } = draggableRange
+    triggerAnimation({ toValue: bottom })
+  }
+
   const scrollIntoView = () => {}
+
+  const { top, bottom } = draggableRange
+  // set backdrop ponter-events
+
+  useEffect(() => {
+    // update draggableRange
+  }, [])
+
+  const triggerAnimation = (options = {}) => {
+    // start flick
+  }
+
+  // render backdrop
+  // render content
 
   return (
     <>
