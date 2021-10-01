@@ -7,6 +7,12 @@ import { SlidingUpPanel } from '../components/sliding-up-panel'
 
 const Container = styled.div``
 
+const Panel = styled.div`
+  flex: 1;
+  backgroundcolor: white;
+  position: relative;
+`
+
 const Index = () => {
   const [searchQuery, setSearchQuery] = useState<string>('')
   const [showPanel, setShowPanel] = useState<boolean>(false)
@@ -36,10 +42,10 @@ const Index = () => {
             top: 0,
             bottom: 0,
           }}
-          containerStyle={{}}
-          backdropStyle={{}}
+          snappingPoints={[360]}
+          friction={0.5}
         >
-          <div>
+          <Panel>
             <div>
               <dl>
                 <dt>dummy title</dt>
@@ -97,7 +103,7 @@ const Index = () => {
                 <dd>dummy text</dd>
               </dl>
             </div>
-          </div>
+          </Panel>
         </SlidingUpPanel>
       </main>
     </Container>
