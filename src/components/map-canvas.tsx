@@ -16,10 +16,12 @@ export const MapCanvas = () => {
         lat: 34.666624,
         lng: 133.935692,
       }
-      const map = new window.google.maps.Map(mapRef.current, {
-        center: defaultCenter,
-        zoom: 10,
-      })
+      if (window.google) {
+        const map = new window.google.maps.Map(mapRef.current, {
+          center: defaultCenter,
+          zoom: 10,
+        })
+      }
     }
   }, [])
 
