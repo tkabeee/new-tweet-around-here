@@ -45,6 +45,7 @@ export const SlidingUpPanel = ({
   showBackdrop = true,
   backdropOpacity = 0.75,
   friction = Constants.DEFAULT_FRICTION,
+  children,
 }: Props) => {
   const show = () => {}
 
@@ -71,7 +72,7 @@ export const SlidingUpPanel = ({
   }
 
   const renderContent = () => {
-    return <></>
+    return <>{children}</>
   }
 
   return [renderBackdrop, renderContent]
