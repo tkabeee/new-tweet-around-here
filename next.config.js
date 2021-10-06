@@ -1,4 +1,6 @@
-module.exports = {
+const withTM = require('next-transpile-modules')(['rn-sliding-up-panel'])
+
+module.exports = withTM({
   reactStrictMode: true,
   env: {
     GOOGLE_MAPS_API_KEY: process.env.GOOGLE_MAPS_API_KEY,
@@ -14,10 +16,16 @@ module.exports = {
     }
     config.resolve.extensions = [
       '.web.js',
+      '.web.jsx',
       '.web.ts',
       '.web.tsx',
+      '.js',
+      '.jsx',
+      '.ts',
+      '.tsx',
       ...config.resolve.extensions,
     ]
+
     return config
   },
-}
+})
