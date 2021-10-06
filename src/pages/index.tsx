@@ -1,9 +1,12 @@
 import { useEffect, useState } from 'react'
+import { Text, View, Dimensions, Animated } from 'react-native'
 import styled from 'styled-components'
+import SlidingUpPanel from 'rn-sliding-up-panel'
 
 import { SearchBar } from '../components/search-bar'
 import { MapCanvas } from '../components/map-canvas'
-import { SlidingUpPanel } from '../components/sliding-up-panel'
+
+const { height } = Dimensions.get('window')
 
 const Container = styled.div``
 
